@@ -1,6 +1,6 @@
 package oose.dea.services.local;
 
-import oose.dea.dao.ItemDAO;
+import oose.dea.datasource.ItemDao;
 import oose.dea.domain.Item;
 import oose.dea.services.ItemService;
 
@@ -9,10 +9,10 @@ import java.util.List;
 
 public class LocalItemService implements ItemService {
     @Inject
-    private ItemDAO itemDAO;
+    private ItemDao itemDao;
 
     @Override
     public List<Item> findAll() {
-        return itemDAO.list();
+        return itemDao.list();
     }
 }

@@ -16,6 +16,12 @@ public class DatabaseProperties {
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Can't access property file database.properties", e);
         }
+
+        try {
+            Class.forName(driver());
+        } catch (ClassNotFoundException e) {
+            logger.log(Level.SEVERE, "Can't load JDBC Driver " + driver(), e);
+        }
     }
 
     public String driver() {

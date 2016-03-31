@@ -1,7 +1,7 @@
 
 package oose.dea.services.rest;
 
-import oose.dea.dao.ItemDAO;
+import oose.dea.datasource.ItemDao;
 import oose.dea.domain.Item;
 import oose.dea.services.ItemService;
 
@@ -16,11 +16,11 @@ import java.util.List;
 public class ItemRestService implements ItemService {
 
     @Inject
-    private ItemDAO itemDAO;
+    private ItemDao itemDao;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Item> findAll() {
-        return itemDAO.list();
+        return itemDao.list();
     }
 }
