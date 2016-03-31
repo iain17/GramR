@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="simple-jersey-rest:war exploded">
+  <artifact type="exploded-war" name="GramR:war exploded">
     <output-path>$PROJECT_DIR$/target/Simple</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
@@ -33,6 +33,7 @@
           <element id="library" level="project" name="Maven: javax:javaee-api:7.0" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.0" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.34" />
         </element>
       </element>
       <element id="directory" name="META-INF">
