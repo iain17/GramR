@@ -37,7 +37,18 @@ public class Photo {
 		return null;
 	}
 
-	public void setCreator(String creator) {
+
+    public Photo(String creator, String title, String url, String description, Set set, Filter filter, ArrayList<Privacy> privacy) {
+        this.creator = creator;
+        this.title = title;
+        this.url = url;
+        this.description = description;
+        this.set = set;
+        this.filter = filter;
+        this.privacy = privacy;
+    }
+
+    public void setCreator(String creator) {
 
 	}
 

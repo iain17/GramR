@@ -3,6 +3,7 @@ package oose.dea.Set;
 import oose.dea.Photo.Photo;
 import oose.dea.Photo.Privacy;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class Set {
