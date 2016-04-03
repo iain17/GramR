@@ -23,6 +23,9 @@ public class RestPhotoService implements PhotoService {
 		return photoDAO.findAll();
 	}
 
+//	@GET
+//	@Path("/{sku}")
+//	@Produces(MediaType.APPLICATION_JSON)
 //	public void applyFilter(int photoId, int filter, int filterArguments) {
 //	}
 }
