@@ -26,9 +26,6 @@ public class PhotoDAO {
 	}
 
 	public ArrayList<Photo> findAll() {
-
-        logger.log(Level.SEVERE, "findAll");
-
         ArrayList<Photo> photos = new ArrayList<>();
         tryFindAll(photos);
         return photos;
@@ -43,13 +40,10 @@ public class PhotoDAO {
 	}
 
     private void tryFindAll(List<Photo> photos) {
-
-
-
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
             PreparedStatement statement = connection.prepareStatement("SELECT * from Photo");
-            addNewItemsFromDatabase(photos, statement);
+            addNewFromDatabase(photos, statement);
             statement.close();
             connection.close();
         } catch (SQLException e) {
@@ -57,16 +51,16 @@ public class PhotoDAO {
         }
     }
 
-    private void addNewItemsFromDatabase(List<Photo> photos, PreparedStatement statement) throws SQLException {
+    private void addNewFromDatabase(List<Photo> photos, PreparedStatement statement) throws SQLException {
         ResultSet resultSet = statement.executeQuery();
 
         while (resultSet.next())
         {
-            addNewItemFromResultSet(photos, resultSet);
+            addNewFromResultSet(photos, resultSet);
         }
     }
 
-    private void addNewItemFromResultSet(List<Photo> photos, ResultSet resultSet) throws SQLException {
+    private void addNewFromResultSet(List<Photo> photos, ResultSet resultSet) throws SQLException {
         //logger.log(Level.SEVERE, resultSet.getString("filter"));
 
         Photo photo = new Photo(

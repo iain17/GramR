@@ -22,19 +22,19 @@ public class Photo {
 	private ArrayList<Privacy> privacy;
 
 	public String getCreator() {
-		return null;
+		return creator;
 	}
 
 	public String getTitle() {
-		return null;
+		return title;
 	}
 
 	public String getUrl() {
-		return null;
+		return url;
 	}
 
 	public String getDescription() {
-		return null;
+		return description;
 	}
 
 
@@ -67,5 +67,15 @@ public class Photo {
 	public void setFilter(int f) {
 
 	}
+
+    @Override
+    public String toString() {
+        return "Photo{" +
+                "creator='" + creator + '\'' +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 
 }
