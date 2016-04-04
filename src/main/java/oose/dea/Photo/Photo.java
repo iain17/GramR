@@ -7,6 +7,8 @@ import oose.dea.Set.Set;
 import java.util.ArrayList;
 
 public class Photo {
+    private String photoId;
+
     private String creator;
 
     private String title;
@@ -19,7 +21,7 @@ public class Photo {
 
     private ArrayList<Privacy> privacies;
 
-    public Photo(String creator, String title, String url, String description, ArrayList<Privacy> privacies, Filter filter) {
+    public Photo(int photoId, String creator, String title, String url, String description, ArrayList<Privacy> privacies, Filter filter) {
         this.creator = creator;
         this.title = title;
         this.url = url;

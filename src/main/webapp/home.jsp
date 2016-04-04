@@ -17,6 +17,8 @@
 <body>
     Hello, <%= session.getAttribute( "owner" ) %><br>
 
+    <a href="/addPhoto">Add photo</a>
+
     <a href="/sets">View all sets</a>
 
     <a href="/photos">View all photos</a><br>

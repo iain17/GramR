@@ -38,8 +38,28 @@ public class PhotoDAO {
     public void findById(int photoId) {
     }
 
-    public void savePhoto(int p) {
+    public boolean insertPhoto(Photo photo) {
+        return tryInsert(photo);
+    }
 
+    private boolean tryInsert(Photo photo) {
+        try {
+            Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO Photo(creator, title, url, description)" +
+                    "VALUES(?, ?, ?, ?)");
+            statement.setString(1, photo.getCreator());
+            statement.setString(2, photo.getTitle());
+            statement.setString(3, photo.getUrl());
+            statement.setString(4, photo.getDescription());
+            statement.execute();
+
+            statement.close();
+            connection.close();
+            return true;
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
+        }
+        return false;
     }
 
     private void tryFindAll(List<Photo> photos) {
@@ -67,6 +87,7 @@ public class PhotoDAO {
 
         //First create the photo object.
         Photo photo = new Photo(
+                resultSet.getInt("id"),
                 resultSet.getString("creator"),
                 resultSet.getString("title"),
                 resultSet.getString("url"),
