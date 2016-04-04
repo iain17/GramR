@@ -6,37 +6,19 @@ import oose.dea.Set.Set;
 import java.util.ArrayList;
 
 public class Photo {
+    private String creator;
 
-	private String creator;
+    private String title;
 
-	private String title;
+    private String url;
 
-	private String url;
+    private String description;
 
-	private String description;
+    private Set set;
 
-	private Set set;
+    private Filter filter;
 
-	private Filter filter;
-
-	private ArrayList<Privacy> privacy;
-
-	public String getCreator() {
-		return creator;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
+    private ArrayList<Privacy> privacy;
 
     public Photo(String creator, String title, String url, String description, Set set, Filter filter, ArrayList<Privacy> privacy) {
         this.creator = creator;
@@ -48,25 +30,36 @@ public class Photo {
         this.privacy = privacy;
     }
 
+    public String getCreator() {
+        return creator;
+    }
+
     public void setCreator(String creator) {
+    }
 
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setTitle(String title) {
+    public void setTitle(String title) {
+    }
 
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public void setUrl(String url) {
+    public void setUrl(String url) {
+    }
 
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setDescription(String description) {
+    public void setDescription(String description) {
+    }
 
-	}
-
-	public void setFilter(int f) {
-
-	}
+    public void setFilter(int f) {
+    }
 
     @Override
     public String toString() {
@@ -77,5 +70,4 @@ public class Photo {
                 ", description='" + description + '\'' +
                 '}';
     }
-
 }

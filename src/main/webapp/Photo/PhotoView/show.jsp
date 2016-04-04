@@ -5,7 +5,6 @@
     <title>GramR - Show photos</title>
 </head>
 <body>
-
 <h1>GramR</h1>
 <h2>Show photos</h2>
 

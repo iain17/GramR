@@ -17,27 +17,26 @@ public class PhotoDAO {
 
     private PhotoModel photoModel;
 
-	public List list() {
-		return null;
-	}
+    public List list() {
+        return null;
+    }
 
-	public List findByTitle() {
-		return null;
-	}
+    public List findByTitle() {
+        return null;
+    }
 
-	public ArrayList<Photo> findAll() {
+    public ArrayList<Photo> findAll() {
         ArrayList<Photo> photos = new ArrayList<>();
         tryFindAll(photos);
         return photos;
-	}
+    }
 
-	public void findById(int photoId) {
+    public void findById(int photoId) {
+    }
 
-	}
+    public void savePhoto(int p) {
 
-	public void savePhoto(int p) {
-
-	}
+    }
 
     private void tryFindAll(List<Photo> photos) {
         try {
@@ -54,8 +53,7 @@ public class PhotoDAO {
     private void addNewFromDatabase(List<Photo> photos, PreparedStatement statement) throws SQLException {
         ResultSet resultSet = statement.executeQuery();
 
-        while (resultSet.next())
-        {
+        while (resultSet.next()) {
             addNewFromResultSet(photos, resultSet);
         }
     }
@@ -75,5 +73,4 @@ public class PhotoDAO {
 
         photos.add(photo);
     }
-
 }

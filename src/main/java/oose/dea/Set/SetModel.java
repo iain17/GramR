@@ -2,16 +2,13 @@ package oose.dea.Set;
 
 public class SetModel {
 
-	private SetViewPageController setViewPageController;
+    private SetViewPageController setViewPageController;
 
-	private SetService setService;
+    private SetService setService;
 
-	public void getAllSets(int owner) {
+    public void getAllSets(int owner) {
+    }
 
-	}
-
-	public void readSetsFromModel() {
-
-	}
-
+    public void readSetsFromModel() {
+    }
 }

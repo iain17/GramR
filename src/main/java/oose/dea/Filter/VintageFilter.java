@@ -6,48 +6,48 @@ import java.util.ArrayList;
 
 public class VintageFilter extends Filter {
 
-	private int upperLeftX;
+    private int upperLeftX;
 
-	private int upperLeftY;
+    private int upperLeftY;
 
-	private int lowerRightX;
+    private int lowerRightX;
 
-	private int lowerRightY;
+    private int lowerRightY;
 
-	public VintageFilter(String description, ArrayList<Photo> photo) {
-		super(description, photo);
-	}
+    public VintageFilter(String description, ArrayList<Photo> photo) {
+        super(description, photo);
+    }
 
-	public int getUpperLeftX() {
-		return 0;
-	}
+    public int getUpperLeftX() {
+        return 0;
+    }
 
-	public int getUpperLeftY() {
-		return 0;
-	}
+    public void setUpperLeftX(int upperLeftX) {
 
-	public int getLowerRightX() {
-		return 0;
-	}
+    }
 
-	public int getLowerRightY() {
-		return 0;
-	}
+    public int getUpperLeftY() {
+        return 0;
+    }
 
-	public void setUpperLeftX(int upperLeftX) {
+    public void setUpperLeftY(int upperLeftY) {
 
-	}
+    }
 
-	public void setUpperLeftY(int upperLeftY) {
+    public int getLowerRightX() {
+        return 0;
+    }
 
-	}
+    public void setLowerRightX(int lowerRightX) {
 
-	public void setLowerRightX(int lowerRightX) {
+    }
 
-	}
+    public int getLowerRightY() {
+        return 0;
+    }
 
-	public void setLowerRightY(int lowerRightY) {
+    public void setLowerRightY(int lowerRightY) {
 
-	}
+    }
 
 }

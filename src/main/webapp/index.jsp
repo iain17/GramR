@@ -4,8 +4,7 @@
     <title>GramR</title>
 </head>
 <body>
-
 <a href="/photos">View all photos</a><br>
-
+<a href="/sets">View all sets</a>
 </body>
 </html>

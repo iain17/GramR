@@ -1,16 +1,30 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: iain17
-  Date: 01/04/16
-  Time: 13:19
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>GramR - Show sets</title>
 </head>
 <body>
+<h1>GramR</h1>
+<h2>Show sets</h2>
 
+<table>
+    <thead>
+        <th>Owner</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <c:forEach items="${sets}" var="set">
+            <tr>
+                <td>
+                    <c:out value="${set.owner}"/>
+                </td>
+                <td>
+                    <c:out value="${set.name}"/>
+                </td>
+            </tr>
+        </c:forEach>
+    </tbody>
+</table>
 </body>
 </html>

@@ -2,18 +2,13 @@ package oose.dea.Set;
 
 import oose.dea.Photo.PhotoModel;
 
-public class SetService {
+import java.util.ArrayList;
 
-	private PhotoModel photoModel;
+public interface SetService {
 
-	private SetModel setModel;
+    PhotoModel photoModel = null;
 
-	public void getAllSets(int owner) {
+    SetModel setModel = null;
 
-	}
-
-	public void getAllPhotos(String searchTerm) {
-
-	}
-
+    ArrayList<Set> getAllSets(int owner);
 }
