@@ -15,7 +15,7 @@
 <center>
     <h1>Zoeken</h1>
     <form method="get">
-        <input type="text" placeholder="Zoek term" style="width: 50%;" name="photo" required/><br>><br>
+        <input type="text" placeholder="Zoek term" style="width: 50%;" name="photo" required/><br><br>
         <input type="submit" value="Zoeken" />
     </form>
     <table style="width: 50%">
