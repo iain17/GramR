@@ -1,16 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: iain17
-  Date: 01/04/16
-  Time: 13:19
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Foto toevoegen</title>
 </head>
 <body>
+    <form method="post">
+        <label>Creator:</label>
+        <input type="text"><br>
 
+        <label>Title:</label>
+        <input type="text"><br>
+
+        <label>URL:</label>
+        <input type="url"><br>
+
+        <label>Description:</label>
+        <input type="text"><br>
+
+        <input type="submit" value="Fotootje toevoegen">
+    </form>
 </body>
 </html>
