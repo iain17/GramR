@@ -1,6 +1,9 @@
 package oose.dea.Photo;
 
 import com.google.inject.Inject;
+import oose.dea.Filter.Filter;
+import oose.dea.Privacy.Privacy;
+import oose.dea.Privacy.PrivacyModel;
 import oose.dea.datasource.util.DatabaseProperties;
 
 import java.sql.*;
@@ -15,7 +18,8 @@ public class PhotoDAO {
     @Inject
     private DatabaseProperties databaseProperties;
 
-    private PhotoModel photoModel;
+    @Inject
+    private PrivacyModel privacyModel;
 
     public List list() {
         return null;
@@ -61,15 +65,25 @@ public class PhotoDAO {
     private void addNewFromResultSet(List<Photo> photos, ResultSet resultSet) throws SQLException {
         //logger.log(Level.SEVERE, resultSet.getString("filter"));
 
+        //First create the photo object.
         Photo photo = new Photo(
                 resultSet.getString("creator"),
                 resultSet.getString("title"),
                 resultSet.getString("url"),
-                resultSet.getString("description"),
-                null,//Set
-                null,//Filter
-                null//Privacy
+                resultSet.getString("description")
         );
+        //Then get all the privacies of that photo
+        ArrayList<Privacy> privacies = privacyModel.getAllPrivaciesByPhotoId(resultSet.getInt("id"));
+
+        //Set photo for privacy.
+        for(Privacy privacy : privacies) {
+            privacy.setPhoto(photo);
+        }
+
+        //Set privacy for photo.
+        photo.setPrivacies(privacies);
+        //photo.setFilter(new Filter());
+
 
         photos.add(photo);
     }

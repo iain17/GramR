@@ -14,14 +14,15 @@ import java.util.logging.Logger;
 @Singleton
 @WebServlet(urlPatterns = "/sets")
 public class SetViewPageController extends HttpServlet {
+
     @Inject
-    private SetDAO setDAO;
+    SetModel setModel;
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Set> photos = setDAO.findAll();
+        ArrayList<Set> photos = setModel.readSetsFromModel();
         request.setAttribute("sets", photos);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
     }

@@ -1,14 +1,25 @@
 package oose.dea.Set;
 
+import com.google.inject.Inject;
+import oose.dea.Photo.PhotoDAO;
+
+import java.util.ArrayList;
+
 public class SetModel {
 
-    private SetViewPageController setViewPageController;
+    @Inject
+    private SetDAO setDAO;
 
-    private SetService setService;
-
-    public void getAllSets(int owner) {
+    public ArrayList<Set> getAllSets(String owner) {
+        return setDAO.findByOwner(owner);
     }
 
-    public void readSetsFromModel() {
+    public ArrayList<Set> readSetsFromModel() {
+        return setDAO.findAll();
     }
+
+    public Set getSet(int setId) {
+        return setDAO.findById(setId);
+    }
+
 }

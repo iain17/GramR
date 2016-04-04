@@ -15,13 +15,13 @@ import java.util.logging.Logger;
 @WebServlet(urlPatterns = "/photos")
 public class PhotoViewPageController extends HttpServlet {
     @Inject
-    private PhotoDAO photoDAO;
+    private PhotoModel photoModel;
 
     private Logger logger = Logger.getLogger(getClass().getName());
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Photo> photos = photoDAO.findAll();
+        ArrayList<Photo> photos = photoModel.getAllPhotos();
         request.setAttribute("photos", photos);
         request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
     }

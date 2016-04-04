@@ -1,6 +1,7 @@
 package oose.dea.Photo;
 
 import oose.dea.Filter.Filter;
+import oose.dea.Privacy.Privacy;
 import oose.dea.Set.Set;
 
 import java.util.ArrayList;
@@ -14,20 +15,20 @@ public class Photo {
 
     private String description;
 
-    private Set set;
-
     private Filter filter;
 
-    private ArrayList<Privacy> privacy;
+    private ArrayList<Privacy> privacies;
 
-    public Photo(String creator, String title, String url, String description, Set set, Filter filter, ArrayList<Privacy> privacy) {
+    public Photo(String creator, String title, String url, String description) {
         this.creator = creator;
         this.title = title;
         this.url = url;
         this.description = description;
-        this.set = set;
         this.filter = filter;
-        this.privacy = privacy;
+    }
+
+    public void setPrivacies(ArrayList<Privacy> privacies) {
+        this.privacies = privacies;
     }
 
     public String getCreator() {
@@ -58,7 +59,8 @@ public class Photo {
     public void setDescription(String description) {
     }
 
-    public void setFilter(int f) {
+    public void setFilter(Filter filter) {
+        this.filter = filter;
     }
 
     @Override

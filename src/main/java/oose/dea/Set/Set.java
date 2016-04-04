@@ -1,7 +1,7 @@
 package oose.dea.Set;
 
 import oose.dea.Photo.Photo;
-import oose.dea.Photo.Privacy;
+import oose.dea.Privacy.Privacy;
 
 import java.util.ArrayList;
 
