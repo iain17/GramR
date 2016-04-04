@@ -15,13 +15,21 @@
     <title>GramR</title>
 </head>
 <body>
-    Hello, <%= session.getAttribute( "owner" ) %><br>
 
-    <a href="/addPhoto">Add photo</a>
+    <a href="index.jsp">Uitloggen</a>
 
-    <a href="/sets">View all sets</a>
+    <center>
+        Hello, <%= session.getAttribute( "owner" ) %><br>
 
-    <a href="/photos">View all photos</a><br>
+        <h2>Sequencediagram "Beheer sets"</h2>
+        <a href="/sets">View all sets</a>
+
+        <h2>Sequencediagram "Zoeken foto"</h2>
+        <a href="/addPhoto">Add photo</a>
+        <a href="/searchPhoto">Search for photos</a><br>
+
+        <a href="/photos">View all photos</a><br>
+    </center>
 
 </body>
 </html>

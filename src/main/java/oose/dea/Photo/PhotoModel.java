@@ -10,8 +10,8 @@ public class PhotoModel {
     @Inject
     private PhotoDAO photoDAO;
 
-    public void getPhotos(String searchTerm) {
-
+    public ArrayList<Photo> getPhotos(String searchTerm) {
+        return photoDAO.findByTitle(searchTerm);
     }
 
     public ArrayList<Photo> getAllPhotos() {

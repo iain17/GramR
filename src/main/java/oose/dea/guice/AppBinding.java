@@ -3,6 +3,7 @@ package oose.dea.guice;
 import com.google.inject.servlet.ServletModule;
 import oose.dea.Photo.AddPhotoPageController;
 import oose.dea.Photo.PhotoViewPageController;
+import oose.dea.Photo.SearchPhotoPageController;
 import oose.dea.Set.SetViewPageController;
 
 public class AppBinding extends ServletModule {
@@ -11,6 +12,7 @@ public class AppBinding extends ServletModule {
         super.configureServlets();
         serve("/photos").with(PhotoViewPageController.class);
         serve("/addPhoto").with(AddPhotoPageController.class);
+        serve("/searchPhoto").with(SearchPhotoPageController.class);
 
 //        serve("/addPhoto").with(AddPhotoPageController.class);
 //        bind(PhotoService.class).to(RestPhotoService.class);

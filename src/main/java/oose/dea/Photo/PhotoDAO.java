@@ -25,8 +25,10 @@ public class PhotoDAO {
         return null;
     }
 
-    public List findByTitle() {
-        return null;
+    public ArrayList<Photo> findByTitle(String title) {
+        ArrayList<Photo> photos = new ArrayList<>();
+        tryFindByTitle(photos, title);
+        return photos;
     }
 
     public ArrayList<Photo> findAll() {
@@ -66,6 +68,21 @@ public class PhotoDAO {
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
             PreparedStatement statement = connection.prepareStatement("SELECT * from Photo");
+            addNewFromDatabase(photos, statement);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
+        }
+    }
+
+    private void tryFindByTitle(List<Photo> photos, String title) {
+        try {
+            Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM Photo WHERE title LIKE ?");
+            statement.setString(1, "%" + title + "%");
+            System.out.println(statement.toString());
+
             addNewFromDatabase(photos, statement);
             statement.close();
             connection.close();

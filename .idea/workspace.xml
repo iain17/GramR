@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c063960-039e-4edd-9de4-a26c86a4e102" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/addPhoto.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/show.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Simple/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/Simple/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Simple/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/Simple/WEB-INF/web.xml" />
     </list>
     <ignored path="simple-jersey-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,20 +51,7 @@
     <favorites_list name="simple-jersey-rest" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddPhotoPageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59536934">
-              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/datasource/util/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/datasource/SQLItemDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoView.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoView.java" />
@@ -103,7 +80,6 @@
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/StaticContent/HomeView.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView/sets.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView/photos.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/addPhoto.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/datasource/util/DatabaseProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/GrayFilter.java" />
@@ -134,18 +110,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/Set/SetView/startAddPhoto.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/show.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logging.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/show.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
       </list>
     </option>
   </component>
@@ -1271,7 +1249,7 @@
       <workItem from="1459750252043" duration="8804000" />
       <workItem from="1459760345013" duration="8176000" />
       <workItem from="1459771412152" duration="1644000" />
-      <workItem from="1459774118105" duration="4114000" />
+      <workItem from="1459774118105" duration="6167000" />
     </task>
     <task id="LOCAL-00001" summary="Got jdbc working">
       <created>1459427184770</created>
@@ -1315,27 +1293,33 @@
       <option name="project" value="LOCAL" />
       <updated>1459764219798</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="photo saves.">
+      <created>1459778243109</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1459778243110</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52272000" />
+    <option name="totallyTimeSpent" value="54325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="166" y="23" width="1514" height="1027" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42032087" sideWeight="0.50244796" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42032087" sideWeight="0.5054348" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986537" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42032087" sideWeight="0.497552" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42032087" sideWeight="0.49456522" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20991848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1377,7 +1361,8 @@
     <MESSAGE value="show photos working with jsp" />
     <MESSAGE value="service fixed" />
     <MESSAGE value="privacy dao en model made.&#10;further made photo" />
-    <option name="LAST_COMMIT_MESSAGE" value="privacy dao en model made.&#10;further made photo" />
+    <MESSAGE value="photo saves." />
+    <option name="LAST_COMMIT_MESSAGE" value="photo saves." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1390,14 +1375,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Set/SetView/startAddPhoto.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1641,22 +1618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48979592">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4377432">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4085603">
@@ -1694,26 +1655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24807057">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/applyFilter.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18686296">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/show.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.016987542">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1742,32 +1687,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/show.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0714285">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.16538037">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/show.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47470817">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.59456396">
+          <caret line="35" column="8" selection-start-line="10" selection-start-column="0" selection-end-line="35" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4377432">
+          <caret line="24" column="47" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5252918">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3618677">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.44941634">
+          <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
           <folding>
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <marker date="1459777903000" expanded="true" signature="1189:1240" placeholder="INSERT INTO photo... " />
-            <marker date="1459777903000" expanded="true" signature="1189:1283" placeholder="INSERT INTO photo... " />
-            <marker date="1459777903000" expanded="true" signature="2063:2082" placeholder="SELECT * fro... Photo" />
+            <marker date="1459779799000" expanded="true" signature="1307:1358" placeholder="INSERT INTO photo... " />
+            <marker date="1459779799000" expanded="true" signature="1307:1401" placeholder="INSERT INTO photo... " />
+            <marker date="1459779799000" expanded="true" signature="2181:2200" placeholder="SELECT * fro... Photo" />
+            <marker date="1459779799000" expanded="true" signature="2746:2765" placeholder="SELECT * fro... Photo" />
+            <marker date="1459779799000" expanded="true" signature="2746:2784" placeholder="SELECT * FRO... Photo" />
           </folding>
         </state>
       </provider>
@@ -1780,21 +1743,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030612245">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="11" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.29182878">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/show.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42857143">
+          <caret line="22" column="11" selection-start-line="20" selection-start-column="3" selection-end-line="22" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59536934">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.76653695">
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42857143">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1122449">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
