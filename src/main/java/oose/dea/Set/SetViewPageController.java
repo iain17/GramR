@@ -22,8 +22,11 @@ public class SetViewPageController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Set> photos = setModel.readSetsFromModel();
-        request.setAttribute("sets", photos);
+        String owner = (String) request.getSession().getValue("owner");
+
+        ArrayList<Set> sets = setModel.getAllSets(owner);
+        System.out.print(sets);
+        request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
     }
 }

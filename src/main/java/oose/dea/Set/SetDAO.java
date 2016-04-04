@@ -42,7 +42,7 @@ public class SetDAO {
     private void tryFindAll(List<Set> sets) {
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
-            PreparedStatement statement = connection.prepareStatement("SELECT * from Set");
+            PreparedStatement statement = connection.prepareStatement("SELECT * from `Set`");
             addNewFromDatabase(sets, statement);
             statement.close();
             connection.close();
@@ -54,7 +54,7 @@ public class SetDAO {
     private void tryFindOwner(List<Set> sets, String owner) {
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
-            PreparedStatement statement = connection.prepareStatement("SELECT * from Set WHERE owner = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * from `Set` WHERE owner = ?");
             statement.setString(1, owner);
 
             addNewFromDatabase(sets, statement);
@@ -68,7 +68,7 @@ public class SetDAO {
     private void tryFindId(List<Set> sets, int setId) {
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
-            PreparedStatement statement = connection.prepareStatement("SELECT * from Set WHERE id = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * from `Set` WHERE id = ?");
             statement.setInt(1, setId);
 
             addNewFromDatabase(sets, statement);

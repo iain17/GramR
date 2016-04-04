@@ -1,5 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    //Session check:
+    if(session.getAttribute( "owner" ) == null) {
+        response.sendRedirect("index.jsp");
+    }
+%>
 <html>
 <head>
     <title>GramR - Show sets</title>

@@ -70,20 +70,11 @@ public class PhotoDAO {
                 resultSet.getString("creator"),
                 resultSet.getString("title"),
                 resultSet.getString("url"),
-                resultSet.getString("description")
+                resultSet.getString("description"),
+                privacyModel.getAllPrivaciesByPhotoId(resultSet.getInt("id")),
+                null//filter
         );
-        //Then get all the privacies of that photo
-        ArrayList<Privacy> privacies = privacyModel.getAllPrivaciesByPhotoId(resultSet.getInt("id"));
-
-        //Set photo for privacy.
-        for(Privacy privacy : privacies) {
-            privacy.setPhoto(photo);
-        }
-
-        //Set privacy for photo.
-        photo.setPrivacies(privacies);
-        //photo.setFilter(new Filter());
-
+        //
 
         photos.add(photo);
     }

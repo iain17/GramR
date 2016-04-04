@@ -19,9 +19,6 @@ public class PrivacyDAO {
     @Inject
     private DatabaseProperties databaseProperties;
 
-    @Inject
-    private SetModel setModel;
-
    public ArrayList<Privacy> findAll() {
         ArrayList<Privacy> privacies = new ArrayList<>();
         tryFindAll(privacies);

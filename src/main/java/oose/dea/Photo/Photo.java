@@ -19,16 +19,22 @@ public class Photo {
 
     private ArrayList<Privacy> privacies;
 
-    public Photo(String creator, String title, String url, String description) {
+    public Photo(String creator, String title, String url, String description, ArrayList<Privacy> privacies, Filter filter) {
         this.creator = creator;
         this.title = title;
         this.url = url;
         this.description = description;
-        this.filter = filter;
+        setPrivacies(privacies);
+        setFilter(filter);
     }
 
     public void setPrivacies(ArrayList<Privacy> privacies) {
         this.privacies = privacies;
+
+        //Set photo for privacy.
+        for(Privacy privacy : privacies) {
+            privacy.setPhoto(this);
+        }
     }
 
     public String getCreator() {

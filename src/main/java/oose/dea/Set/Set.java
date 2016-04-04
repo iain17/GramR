@@ -25,6 +25,23 @@ public class Set {
     public void changeName(String name) {
     }
 
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Photo getPhoto() {
+        return photo;
+    }
+
+    public ArrayList<Privacy> getPrivacy() {
+        return privacy;
+    }
+
     @Override
     public String toString() {
         return "Set{" +
