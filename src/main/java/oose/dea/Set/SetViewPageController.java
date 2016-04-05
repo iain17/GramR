@@ -25,7 +25,6 @@ public class SetViewPageController extends HttpServlet {
         String owner = (String) request.getSession().getValue("owner");
 
         ArrayList<Set> sets = setModel.getAllSets(owner);
-        System.out.print(sets);
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
     }
@@ -35,10 +34,13 @@ public class SetViewPageController extends HttpServlet {
 
         int setId = Integer.parseInt(request.getParameter("setId"));
         request.getSession().setAttribute("setId", setId);
+
+        String setName = request.getParameter("setName");
+        request.getSession().setAttribute("setName", setName);
+
         String owner = (String) request.getSession().getValue("owner");
 
         ArrayList<Set> sets = setModel.getAllSets(owner);
-        System.out.print(sets);
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
 

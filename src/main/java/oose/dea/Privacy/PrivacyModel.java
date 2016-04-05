@@ -4,9 +4,6 @@ import com.google.inject.Inject;
 
 import java.util.ArrayList;
 
-/**
- * Created by iain17 on 04/04/16.
- */
 public class PrivacyModel {
 
     @Inject
@@ -14,6 +11,14 @@ public class PrivacyModel {
 
     public ArrayList<Privacy> getAllPrivaciesByPhotoId(int photoId) {
         return privacyDAO.findByPhotoId(photoId);
+    }
+
+    public boolean createPrivacy(int photoId, int setId, boolean open) {
+        return privacyDAO.insertPhoto(new Privacy(
+            photoId,
+            setId,
+            open
+        ));
     }
 
 }

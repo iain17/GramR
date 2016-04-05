@@ -11,13 +11,13 @@
     Hello <%= session.getAttribute("owner") %>.<br>
 
     <c:if test="${setId != null}">
-    <p>U beheert nu een set met setId: ${setId}
-        </c:if>
+        U beheert nu een set: ${setName}
+    </c:if>
 
-    <h2>Sequence diagram "Beheer sets"</h2>
+    <h2>1.1.4.4.1.1. gramR sets SD</h2>
     <a href="/sets">View all sets</a><br>
 
-    <h2>Sequence diagram "Zoeken foto"</h2>
+    <h2>1.1.4.5.1.1. gramR addphoto SD</h2>
     <a href="/addPhoto">Add photo</a><br>
     <a href="/searchPhoto">Search for photos</a><br>
 

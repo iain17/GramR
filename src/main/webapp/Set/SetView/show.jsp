@@ -10,7 +10,7 @@
     <h2>Show sets</h2>
 
     <c:if test="${setId != null}">
-    <p>U beheert nu een set met setId: ${setId}
+    U beheert nu een set met setId: ${setName}
     </c:if>
 
     <table>
@@ -25,6 +25,7 @@
                 <td>
                     <form method="post">
                         <input type="hidden" name="setId" value="${set.id}">
+                        <input type="hidden" name="setName" value="${set.name}">
                         <input type="submit" value="Beheren">
                     </form>
                 </td>

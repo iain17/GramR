@@ -22,8 +22,6 @@ public class IndexViewPageController extends HttpServlet {
             request.getSession().setAttribute("owner", request.getParameter("owner"));
         }
 
-        request.setAttribute("setId", request.getSession().getValue("setId"));
-
         request.getRequestDispatcher("StaticContent/HomeView/index.jsp").forward(request, response);
     }
 

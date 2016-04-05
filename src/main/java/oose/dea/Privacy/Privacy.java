@@ -35,4 +35,20 @@ public class Privacy {
         return open;
     }
 
+    public Set getSet() {
+        return set;
+    }
+
+    public Photo getPhoto() {
+        return photo;
+    }
+
+    public int getPhotoId() {
+        return photoId;
+    }
+
+    public int getSetId() {
+        return setId;
+    }
+
 }

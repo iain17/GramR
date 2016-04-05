@@ -79,7 +79,6 @@ public class PhotoDAO {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Photo WHERE title LIKE ?");
             statement.setString(1, "%" + title + "%");
-            System.out.println(statement.toString());
 
             addNewFromDatabase(photos, statement);
             statement.close();

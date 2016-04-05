@@ -6,7 +6,8 @@ import oose.dea.Privacy.Privacy;
 import java.util.ArrayList;
 
 public class Photo {
-    private String photoId;
+
+    private int id;
 
     private String creator;
 
@@ -20,7 +21,8 @@ public class Photo {
 
     private ArrayList<Privacy> privacies;
 
-    public Photo(int photoId, String creator, String title, String url, String description, ArrayList<Privacy> privacies, Filter filter) {
+    public Photo(int id, String creator, String title, String url, String description, ArrayList<Privacy> privacies, Filter filter) {
+        this.id = id;
         this.creator = creator;
         this.title = title;
         this.url = url;
@@ -43,6 +45,11 @@ public class Photo {
     }
 
     public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -57,6 +64,7 @@ public class Photo {
     }
 
     public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getDescription() {
@@ -64,6 +72,11 @@ public class Photo {
     }
 
     public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ArrayList<Privacy> getPrivacies() {
+        return privacies;
     }
 
     public void setFilter(Filter filter) {

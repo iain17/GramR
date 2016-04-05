@@ -21,8 +21,4 @@ public class SetModel {
         return setDAO.findById(setId);
     }
 
-    public void putSet(Set set) {
-
-    }
-
 }
