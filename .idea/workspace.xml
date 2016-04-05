@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c063960-039e-4edd-9de4-a26c86a4e102" name="Default" comment="- No more java in jsp files. Session check now in web filter.&#10;- Manage set done.&#10;- Static jsp files now have controllers.">
+    <list default="true" id="3c063960-039e-4edd-9de4-a26c86a4e102" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/Privacy.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/Privacy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/StaticContent/IndexViewPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/StaticContent/IndexViewPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Set/SetView/show.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Set/SetView/show.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView/home.jsp" />
     </list>
     <ignored path="simple-jersey-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +50,8 @@
       <file leaf-file-name="searchPhoto.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.304">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="59" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.352">
+              <caret line="58" column="26" selection-start-line="57" selection-start-column="18" selection-end-line="58" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1314,7 +1303,7 @@
       <workItem from="1459838714439" duration="1108000" />
       <workItem from="1459852807502" duration="169000" />
       <workItem from="1459853022318" duration="5042000" />
-      <workItem from="1459881222494" duration="4453000" />
+      <workItem from="1459881222494" duration="4491000" />
     </task>
     <task id="LOCAL-00001" summary="Got jdbc working">
       <created>1459427184770</created>
@@ -1382,11 +1371,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459857277656</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- je kan nu een foto aan een set toevoegen.">
+      <created>1459885728152</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1459885728153</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68234000" />
+    <option name="totallyTimeSpent" value="68272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1676" height="1027" extended-state="6" />
@@ -1449,7 +1444,8 @@
     <MESSAGE value="worked on session" />
     <MESSAGE value="set a current set done." />
     <MESSAGE value="- No more java in jsp files. Session check now in web filter.&#10;- Manage set done.&#10;- Static jsp files now have controllers." />
-    <option name="LAST_COMMIT_MESSAGE" value="- No more java in jsp files. Session check now in web filter.&#10;- Manage set done.&#10;- Static jsp files now have controllers." />
+    <MESSAGE value="- je kan nu een foto aan een set toevoegen." />
+    <option name="LAST_COMMIT_MESSAGE" value="- je kan nu een foto aan een set toevoegen." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1857,8 +1853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.304">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="59" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.352">
+          <caret line="58" column="26" selection-start-line="57" selection-start-column="18" selection-end-line="58" selection-end-column="26" />
           <folding />
         </state>
       </provider>
