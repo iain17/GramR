@@ -54,10 +54,9 @@
                     <c:out value="${photo.description}"/>
                 </td>
                 <td>
-                    <%--<c:forEach items="${photos.privacies}" var="privacy">--%>
-                        <%--${privacy.setId},--%>
-                        <%--${privacy.set}--%>
-                    <%--</c:forEach>--%>
+                    <c:forEach items="${photo.privacies}" var="privacy">
+                        ${privacy.set.name},
+                    </c:forEach>
                 </td>
                 <td>
                     <c:if test="${setId != null}">
