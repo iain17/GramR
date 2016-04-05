@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 
 @Singleton
-@WebServlet(urlPatterns = "/photos")
+@WebServlet(urlPatterns = {"/photos", "/photo/*"})
 public class PhotoViewPageController extends HttpServlet {
     @Inject
     private PhotoModel photoModel;
@@ -21,9 +21,20 @@ public class PhotoViewPageController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Photo> photos = photoModel.getAllPhotos();
-        request.setAttribute("photos", photos);
-        request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
+
+
+        if(request.getRequestURI().equals("/photos")) {
+            ArrayList<Photo> photos = photoModel.getAllPhotos();
+            request.setAttribute("photos", photos);
+            request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
+        } else {
+
+            //We'll just assume that it is /photo/*
+            //Hij loopt geen idee waarom. Robin fix het.
+            request.getRequestDispatcher("Photo/PhotoView/applyFilter.jsp").forward(request, response);
+
+        }
+
     }
 
 }

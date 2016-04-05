@@ -4,14 +4,14 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          metadata-complete="false"
          version="3.1">
-    <servlet>
-        <servlet-name>applyFilter</servlet-name>
-        <jsp-file>/Photo/PhotoView/applyFilter.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>applyFilter</servlet-name>
-        <url-pattern>/photo/*</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>applyFilter</servlet-name>-->
+        <!--<jsp-file>/Photo/PhotoView/applyFilter.jsp</jsp-file>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>applyFilter</servlet-name>-->
+        <!--<url-pattern>/photo/*</url-pattern>-->
+    <!--</servlet-mapping>-->
 
     <!--<servlet>-->
     <!--<servlet-name>startAddPhoto</servlet-name>-->
