@@ -29,4 +29,19 @@ public class SetViewPageController extends HttpServlet {
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        int setId = Integer.parseInt(request.getParameter("setId"));
+        request.getSession().setAttribute("setId", setId);
+        String owner = (String) request.getSession().getValue("owner");
+
+        ArrayList<Set> sets = setModel.getAllSets(owner);
+        System.out.print(sets);
+        request.setAttribute("sets", sets);
+        request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
+
+    }
+
 }

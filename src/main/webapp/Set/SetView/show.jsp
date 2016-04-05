@@ -5,11 +5,6 @@
     if (session.getAttribute("owner") == null) {
         response.sendRedirect("index.jsp");
     }
-
-    if (request.getParameter("id") != null) {
-        String id = request.getParameter("id");
-        session.setAttribute("id", id);
-    }
 %>
 <html>
 <head>
@@ -18,6 +13,10 @@
 <body>
 <h1>GramR</h1>
 <h2>Show sets</h2>
+
+<c:if test="${setId != null}">
+<p>U beheert nu een set met setId: ${setId}
+</c:if>
 
 <table>
     <thead>
@@ -30,8 +29,8 @@
         <tr>
             <td>
                 <form method="post">
-                    <input type="hidden" name="id" value="${set.id}">
-                    <input type="submit" value="${set.id}">
+                    <input type="hidden" name="setId" value="${set.id}">
+                    <input type="submit" value="Beheren">
                 </form>
             </td>
             <td>

@@ -16,8 +16,8 @@ public class Set {
 
     private ArrayList<Privacy> privacy;
 
-    public Set(String owner, String name) {
-        this.id = 5;
+    public Set(int id, String owner, String name) {
+        this.id = id;
         this.owner = owner;
         this.name = name;
     }

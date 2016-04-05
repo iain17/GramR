@@ -18,10 +18,11 @@
 <a href="index.jsp">Uitloggen</a>
 
 <center>
-    Hello <i><%= session.getAttribute("owner") %>
-</i>.<br>
-    Selected set <i><%= session.getAttribute("set") %>
-</i>.<br>
+    Hello <%= session.getAttribute("owner") %>.<br>
+
+    <c:if test="${setId != null}">
+    <p>U beheert nu een set met setId: ${setId}
+        </c:if>
 
     <h2>Sequence diagram "Beheer sets"</h2>
     <a href="/sets">View all sets</a>
