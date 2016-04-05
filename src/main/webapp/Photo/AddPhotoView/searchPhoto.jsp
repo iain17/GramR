@@ -1,17 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    //Session check:
-    if (session.getAttribute("owner") == null) {
-        response.sendRedirect("index.jsp");
-    }
-%>
+
 <html>
 <head>
     <title>GramR - zoeken</title>
 </head>
 <body>
-<a href="home.jsp">Terug</a>
+<a href="/home">Terug</a>
 <center>
     <h1>Zoeken</h1>
     <form method="get">

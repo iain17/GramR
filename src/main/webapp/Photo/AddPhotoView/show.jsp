@@ -1,21 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    //Session check:
-    if (session.getAttribute("owner") == null) {
-        response.sendRedirect("index.jsp");
-    }
-%>
 <html>
 <head>
     <title>GramR - foto toevoegen</title>
 </head>
 <body>
-    <center>
+<a href="/home">Terug</a>
+<center>
         <h1>Foto toevoegen</h1>
 
         <c:if test="${result}">
-            <p>Foto is succesvol opgeslagen en toegevoegd aan set <i><%= session.getAttribute("set") %></i>!</p>
+            <p>Foto is succesvol opgeslagen en toegevoegd.</p>
         </c:if>
 
         <c:if test="${result != null && !result}">
