@@ -89,7 +89,6 @@ public class SetDAO {
     }
 
     private void addNewFromResultSet(List<Set> sets, ResultSet resultSet) throws SQLException {
-
         Set set = new Set(
                 resultSet.getString("owner"),
                 resultSet.getString("name")

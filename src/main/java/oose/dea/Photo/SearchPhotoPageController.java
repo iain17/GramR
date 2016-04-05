@@ -1,7 +1,5 @@
 package oose.dea.Photo;
 
-import oose.dea.Set.Set;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.servlet.ServletException;

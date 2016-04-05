@@ -2,7 +2,6 @@ package oose.dea.Photo;
 
 import oose.dea.Filter.Filter;
 import oose.dea.Privacy.Privacy;
-import oose.dea.Set.Set;
 
 import java.util.ArrayList;
 
@@ -34,7 +33,7 @@ public class Photo {
         this.privacies = privacies;
 
         //Set photo for privacy.
-        for(Privacy privacy : privacies) {
+        for (Privacy privacy : privacies) {
             privacy.setPhoto(this);
         }
     }

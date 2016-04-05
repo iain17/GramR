@@ -6,6 +6,8 @@ import oose.dea.Privacy.Privacy;
 import java.util.ArrayList;
 
 public class Set {
+    private int id;
+
     private String owner;
 
     private String name;
@@ -15,6 +17,7 @@ public class Set {
     private ArrayList<Privacy> privacy;
 
     public Set(String owner, String name) {
+        this.id = 5;
         this.owner = owner;
         this.name = name;
     }
@@ -25,6 +28,9 @@ public class Set {
     public void changeName(String name) {
     }
 
+    public int getId() {
+        return id;
+    }
 
     public String getOwner() {
         return owner;

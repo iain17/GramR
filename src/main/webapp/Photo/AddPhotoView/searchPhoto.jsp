@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     //Session check:
-    if(session.getAttribute( "owner" ) == null) {
+    if (session.getAttribute("owner") == null) {
         response.sendRedirect("index.jsp");
     }
 %>
@@ -15,8 +15,8 @@
 <center>
     <h1>Zoeken</h1>
     <form method="get">
-        <input type="text" placeholder="Zoek term" style="width: 50%;" name="photo" required/><br><br>
-        <input type="submit" value="Zoeken" />
+        <input type="text" placeholder="Zoekterm" style="width: 50%;" name="photo" required/><br><br>
+        <input type="submit" value="Zoeken"/>
     </form>
     <table style="width: 50%">
         <thead>
@@ -45,8 +45,9 @@
         </tbody>
     </table>
     <c:if test="${photos.size() == 0}">
-    <p>Geen zoekresultaten gevonden<p>
-    </c:if>
+    <p>Geen zoekresultaten gevonden
+    <p>
+        </c:if>
 
 </center>
 

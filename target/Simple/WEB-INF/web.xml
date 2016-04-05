@@ -14,12 +14,12 @@
     </servlet-mapping>
 
     <!--<servlet>-->
-        <!--<servlet-name>startAddPhoto</servlet-name>-->
-        <!--<jsp-file>/Set/SetView/startAddPhoto.jsp</jsp-file>-->
+    <!--<servlet-name>startAddPhoto</servlet-name>-->
+    <!--<jsp-file>/Set/SetView/startAddPhoto.jsp</jsp-file>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
-        <!--<servlet-name>startAddPhoto</servlet-name>-->
-        <!--<url-pattern>/addPhoto/*</url-pattern>-->
+    <!--<servlet-name>startAddPhoto</servlet-name>-->
+    <!--<url-pattern>/addPhoto/*</url-pattern>-->
     <!--</servlet-mapping>-->
     <!---->
 </web-app>

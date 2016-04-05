@@ -1,10 +1,6 @@
 package oose.dea.Privacy;
 
 import com.google.inject.Inject;
-import oose.dea.Photo.Photo;
-import oose.dea.Photo.PhotoModel;
-import oose.dea.Set.Set;
-import oose.dea.Set.SetModel;
 import oose.dea.datasource.util.DatabaseProperties;
 
 import java.sql.*;
@@ -19,11 +15,11 @@ public class PrivacyDAO {
     @Inject
     private DatabaseProperties databaseProperties;
 
-   public ArrayList<Privacy> findAll() {
+    public ArrayList<Privacy> findAll() {
         ArrayList<Privacy> privacies = new ArrayList<>();
         tryFindAll(privacies);
         return privacies;
-   }
+    }
 
     public ArrayList<Privacy> findByPhotoId(int photoId) {
         ArrayList<Privacy> privacies = new ArrayList<>();
@@ -31,7 +27,7 @@ public class PrivacyDAO {
         return privacies;
     }
 
-   private void tryFindAll(List<Privacy> privacies) {
+    private void tryFindAll(List<Privacy> privacies) {
         try {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
             PreparedStatement statement = connection.prepareStatement("SELECT * from Privacy");

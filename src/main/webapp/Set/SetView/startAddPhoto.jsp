@@ -4,20 +4,20 @@
     <title>Foto toevoegen</title>
 </head>
 <body>
-    <form method="post">
-        <label>Creator:</label>
-        <input type="text"><br>
+<form method="post">
+    <label>Creator:</label>
+    <input type="text"><br>
 
-        <label>Title:</label>
-        <input type="text"><br>
+    <label>Title:</label>
+    <input type="text"><br>
 
-        <label>URL:</label>
-        <input type="url"><br>
+    <label>URL:</label>
+    <input type="url"><br>
 
-        <label>Description:</label>
-        <input type="text"><br>
+    <label>Description:</label>
+    <input type="text"><br>
 
-        <input type="submit" value="Fotootje toevoegen">
-    </form>
+    <input type="submit" value="Fotootje toevoegen">
+</form>
 </body>
 </html>

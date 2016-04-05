@@ -4,6 +4,6 @@
     <title>Welcome</title>
 </head>
 <body>
-    Dit moet werken voordat we verder kunnen gaan.
+Dit moet werken voordat we verder kunnen gaan.
 </body>
 </html>

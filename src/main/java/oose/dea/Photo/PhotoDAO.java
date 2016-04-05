@@ -1,8 +1,6 @@
 package oose.dea.Photo;
 
 import com.google.inject.Inject;
-import oose.dea.Filter.Filter;
-import oose.dea.Privacy.Privacy;
 import oose.dea.Privacy.PrivacyModel;
 import oose.dea.datasource.util.DatabaseProperties;
 
