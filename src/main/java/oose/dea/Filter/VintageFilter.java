@@ -1,11 +1,6 @@
 package oose.dea.Filter;
 
-import oose.dea.Photo.Photo;
-
-import java.util.ArrayList;
-
 public class VintageFilter extends Filter {
-
     private int upperLeftX;
 
     private int upperLeftY;
@@ -14,40 +9,39 @@ public class VintageFilter extends Filter {
 
     private int lowerRightY;
 
-    public VintageFilter(String description, ArrayList<Photo> photo) {
-        super(description, photo);
+    public VintageFilter() {
+        super("vintage");
     }
 
     public int getUpperLeftX() {
-        return 0;
+        return upperLeftX;
     }
 
     public void setUpperLeftX(int upperLeftX) {
-
+        this.upperLeftX = upperLeftX;
     }
 
     public int getUpperLeftY() {
-        return 0;
+        return upperLeftY;
     }
 
     public void setUpperLeftY(int upperLeftY) {
-
+        this.upperLeftY = upperLeftY;
     }
 
     public int getLowerRightX() {
-        return 0;
+        return lowerRightX;
     }
 
     public void setLowerRightX(int lowerRightX) {
-
+        this.lowerRightX = lowerRightX;
     }
 
     public int getLowerRightY() {
-        return 0;
+        return lowerRightY;
     }
 
     public void setLowerRightY(int lowerRightY) {
-
+        this.lowerRightY = lowerRightY;
     }
-
 }

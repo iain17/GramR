@@ -6,24 +6,33 @@ import java.util.ArrayList;
 
 public abstract class Filter {
     private String description;
-    private ArrayList<Photo> photo;
 
-    public Filter(String description, ArrayList<Photo> photo) {
+    private ArrayList<Photo> photos;
+
+    public Filter(String description) {
         this.description = description;
-        this.photo = photo;
     }
 
     public String getDescription() {
-        return null;
+        return description;
     }
 
     public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ArrayList<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(ArrayList<Photo> photos) {
+        this.photos = photos;
     }
 
     @Override
     public String toString() {
         return "Filter{" +
-                "owner='" + description + '\'' +
+                "description='" + description + '\'' +
                 '}';
     }
 }
