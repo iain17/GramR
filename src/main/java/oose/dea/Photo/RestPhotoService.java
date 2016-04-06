@@ -29,10 +29,10 @@ public class RestPhotoService implements PhotoService {
 //        return photoModel.
 //    }
 
-	@GET
-	@Path("/photo/{photoId}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Photo getPhoto(@PathParam("photoId") final int photoId) {
+    @GET
+    @Path("/photo/{photoId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Photo getPhoto(@PathParam("photoId") final int photoId) {
         return photoModel.getByPhoto(photoId);
-	}
+    }
 }

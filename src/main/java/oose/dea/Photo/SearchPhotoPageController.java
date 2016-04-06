@@ -1,7 +1,6 @@
 package oose.dea.Photo;
 
 import oose.dea.Privacy.PrivacyModel;
-import oose.dea.Set.SetModel;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -39,7 +38,7 @@ public class SearchPhotoPageController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         boolean actionResult = false;
-        switch(request.getParameter("action")) {
+        switch (request.getParameter("action")) {
             case "addPhotoToCurrentSet":
                 actionResult = privacyModel.createPrivacy(Integer.parseInt(request.getParameter("photoId")), Integer.parseInt(request.getParameter("setId")), request.getParameter("open") == "1");
                 break;

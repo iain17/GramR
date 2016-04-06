@@ -1,7 +1,5 @@
 package oose.dea.Photo;
 
-import oose.dea.Set.Set;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.servlet.ServletException;
@@ -9,8 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.Path;
-import javax.ws.rs.ext.ExceptionMapper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
@@ -29,11 +25,11 @@ public class PhotoViewPageController extends HttpServlet {
         int photoId = 0;
         try {
             photoId = Integer.parseInt(request.getParameter("photoId"));
-        }catch(Exception e) {
+        } catch (Exception e) {
 
         }
 
-        if(photoId != 0) {
+        if (photoId != 0) {
             Photo photo = photoModel.getByPhoto(photoId);
             request.setAttribute("photo", photo);
             request.getRequestDispatcher("/Photo/PhotoView/applyFilter.jsp").forward(request, response);
@@ -49,7 +45,7 @@ public class PhotoViewPageController extends HttpServlet {
         int photoId = 0;
         try {
             photoId = Integer.parseInt(request.getParameter("photoId"));
-        }catch(Exception e) {
+        } catch (Exception e) {
 
         }
 

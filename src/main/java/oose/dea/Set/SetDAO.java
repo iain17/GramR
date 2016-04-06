@@ -1,7 +1,6 @@
 package oose.dea.Set;
 
 import com.google.inject.Inject;
-import oose.dea.Photo.Photo;
 import oose.dea.datasource.util.DatabaseProperties;
 
 import java.sql.*;

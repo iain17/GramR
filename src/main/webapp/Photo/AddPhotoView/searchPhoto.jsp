@@ -14,13 +14,13 @@
     <c:if test="${actionResult != null}">
         <%--<c:if test="${action == \"addPhotoToCurrentSet\"}">--%>
 
-            <c:if test="${actionResult}">
-                De geselecteerde foto is succesvol toegevoegd aan het set.
-            </c:if>
+        <c:if test="${actionResult}">
+            De geselecteerde foto is succesvol toegevoegd aan het set.
+        </c:if>
 
-            <c:if test="${!actionResult}">
-                Er ging iets fout. De geselecteerde foto is niet toegevoegd aan het set.
-            </c:if>
+        <c:if test="${!actionResult}">
+            Er ging iets fout. De geselecteerde foto is niet toegevoegd aan het set.
+        </c:if>
 
         <%--</c:if>--%>
     </c:if>

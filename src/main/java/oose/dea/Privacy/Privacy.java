@@ -19,14 +19,6 @@ public class Privacy {
         this.setId = setId;
     }
 
-    public void setPhoto(Photo photo) {
-        this.photo = photo;
-    }
-
-    public void setSet(Set set) {
-        this.set = set;
-    }
-
     public void toggle() {
         open = !open;
     }
@@ -39,8 +31,16 @@ public class Privacy {
         return set;
     }
 
+    public void setSet(Set set) {
+        this.set = set;
+    }
+
     public Photo getPhoto() {
         return photo;
+    }
+
+    public void setPhoto(Photo photo) {
+        this.photo = photo;
     }
 
     public int getPhotoId() {

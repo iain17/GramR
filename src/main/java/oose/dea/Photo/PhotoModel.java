@@ -34,13 +34,13 @@ public class PhotoModel {
 
         if (filter.equals("gray")) {
             filterObject = new GrayFilter();
-            ((GrayFilter)filterObject).setPercentage(Integer.parseInt(filterArguments.get(0)));
+            ((GrayFilter) filterObject).setPercentage(Integer.parseInt(filterArguments.get(0)));
         } else if (filter.equals("vintage")) {
             filterObject = new VintageFilter();
-            ((VintageFilter)filterObject).setUpperLeftX(Integer.parseInt(filterArguments.get(0)));
-            ((VintageFilter)filterObject).setUpperLeftY(Integer.parseInt(filterArguments.get(1)));
-            ((VintageFilter)filterObject).setLowerRightX(Integer.parseInt(filterArguments.get(2)));
-            ((VintageFilter)filterObject).setLowerRightY(Integer.parseInt(filterArguments.get(3)));
+            ((VintageFilter) filterObject).setUpperLeftX(Integer.parseInt(filterArguments.get(0)));
+            ((VintageFilter) filterObject).setUpperLeftY(Integer.parseInt(filterArguments.get(1)));
+            ((VintageFilter) filterObject).setLowerRightX(Integer.parseInt(filterArguments.get(2)));
+            ((VintageFilter) filterObject).setLowerRightY(Integer.parseInt(filterArguments.get(3)));
         }
 
         return photoDAO.applyFilter(photoId, filterObject);

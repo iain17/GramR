@@ -18,7 +18,7 @@ public class IndexViewPageController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //Set session
-        if(request.getParameter("owner") != null) {
+        if (request.getParameter("owner") != null) {
             request.getSession().setAttribute("owner", request.getParameter("owner"));
         }
 
@@ -29,11 +29,11 @@ public class IndexViewPageController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String owner = request.getParameter("owner");
         //Set session
-        if(owner != null) {
+        if (owner != null) {
             request.getSession().setAttribute("owner", owner);
         }
 
-        if(owner != null) {
+        if (owner != null) {
             response.sendRedirect("/home");
         } else {
             request.getRequestDispatcher("StaticContent/HomeView/index.jsp").forward(request, response);

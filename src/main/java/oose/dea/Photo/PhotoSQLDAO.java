@@ -6,7 +6,6 @@ import oose.dea.Filter.GrayFilter;
 import oose.dea.Filter.VintageFilter;
 import oose.dea.Privacy.Privacy;
 import oose.dea.Privacy.PrivacyDAO;
-import oose.dea.Privacy.PrivacyModel;
 import oose.dea.datasource.util.DatabaseProperties;
 
 import java.sql.*;
@@ -16,11 +15,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PhotoSQLDAO implements PhotoDAO {
-    private Logger logger = Logger.getLogger(getClass().getName());
-
     @Inject
-    private DatabaseProperties databaseProperties;
-
+    public DatabaseProperties databaseProperties;
+    private Logger logger = Logger.getLogger(getClass().getName());
     @Inject
     private PrivacyDAO privacyDAO;
 
@@ -39,7 +36,7 @@ public class PhotoSQLDAO implements PhotoDAO {
     public Photo findById(int photoId) {
         ArrayList<Photo> photos = new ArrayList<>();
         tryFindById(photos, photoId);
-        if(photos.size() != 1) {
+        if (photos.size() != 1) {
             return null;
         }
         return photos.get(0);
@@ -167,24 +164,22 @@ public class PhotoSQLDAO implements PhotoDAO {
 
         ArrayList<Privacy> privacies = new ArrayList<Privacy>();
 
-        if(getPrivacy) {
-
-           privacies = privacyDAO.findByPhotoId(resultSet.getInt("id"));
-
+        if (getPrivacy) {
+            privacies = privacyDAO.findByPhotoId(resultSet.getInt("id"));
         }
 
-        if(sFilter != null) {
-            switch(sFilter) {
+        if (sFilter != null) {
+            switch (sFilter) {
                 case "gray":
                     filter = new GrayFilter();
-                    ((GrayFilter)filter).setPercentage(Integer.parseInt(resultSet.getString("filterGrayPercentage")));
+                    ((GrayFilter) filter).setPercentage(Integer.parseInt(resultSet.getString("filterGrayPercentage")));
                     break;
                 case "vintage":
                     filter = new VintageFilter();
-                    ((VintageFilter)filter).setLowerRightX(Integer.parseInt(resultSet.getString("filterVintageUpperRightX")));
-                    ((VintageFilter)filter).setLowerRightY(Integer.parseInt(resultSet.getString("filterVintageUpperRightY")));
-                    ((VintageFilter)filter).setUpperLeftX(Integer.parseInt(resultSet.getString("filterVintageUpperLeftX")));
-                    ((VintageFilter)filter).setUpperLeftY(Integer.parseInt(resultSet.getString("filterVintageUpperLeftY")));
+                    ((VintageFilter) filter).setLowerRightX(Integer.parseInt(resultSet.getString("filterVintageUpperRightX")));
+                    ((VintageFilter) filter).setLowerRightY(Integer.parseInt(resultSet.getString("filterVintageUpperRightY")));
+                    ((VintageFilter) filter).setUpperLeftX(Integer.parseInt(resultSet.getString("filterVintageUpperLeftX")));
+                    ((VintageFilter) filter).setUpperLeftY(Integer.parseInt(resultSet.getString("filterVintageUpperLeftY")));
                     break;
             }
         }

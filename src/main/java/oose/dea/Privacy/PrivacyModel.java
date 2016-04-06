@@ -19,9 +19,9 @@ public class PrivacyModel {
 
     public boolean createPrivacy(int photoId, int setId, boolean open) {
         return privacyDAO.insertPhoto(new Privacy(
-            photoId,
-            setId,
-            open
+                photoId,
+                setId,
+                open
         ));
     }
 

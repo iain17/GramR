@@ -18,13 +18,13 @@ public class GuiceWebFilter extends GuiceFilter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
-        if(request != null) {
+        if (request != null) {
             HttpSession session = request.getSession();
-            if(session != null) {
-                String owner = (String)session.getValue("owner");
+            if (session != null) {
+                String owner = (String) session.getValue("owner");
 
                 //Don't do this session check for rest calls.
-                if(!request.getRequestURI().matches("/rest")) {
+                if (!request.getRequestURI().matches("/rest")) {
 
                     //Do session check:
                     if (!request.getRequestURI().equals("/index.jsp") && !request.getRequestURI().equals("/") && owner == null) {

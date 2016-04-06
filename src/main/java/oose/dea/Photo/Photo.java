@@ -31,17 +31,6 @@ public class Photo {
         setFilter(filter);
     }
 
-    public void setPrivacies(ArrayList<Privacy> privacies) {
-        if(privacies == null)
-            return;
-        this.privacies = privacies;
-
-        //Set photo for privacy.
-        for (Privacy privacy : privacies) {
-            privacy.setPhoto(this);
-        }
-    }
-
     public String getCreator() {
         return creator;
     }
@@ -59,6 +48,7 @@ public class Photo {
     }
 
     public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getUrl() {
@@ -79,6 +69,17 @@ public class Photo {
 
     public ArrayList<Privacy> getPrivacies() {
         return privacies;
+    }
+
+    public void setPrivacies(ArrayList<Privacy> privacies) {
+        if (privacies == null)
+            return;
+        this.privacies = privacies;
+
+        //Set photo for privacy.
+        for (Privacy privacy : privacies) {
+            privacy.setPhoto(this);
+        }
     }
 
     public void setFilter(Filter filter) {

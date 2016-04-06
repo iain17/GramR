@@ -32,7 +32,7 @@ public class SetViewPageController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String owner = (String) request.getSession().getValue("owner");
 
-        switch(request.getParameter("action")) {
+        switch (request.getParameter("action")) {
 
             case "manage":
                 int setId = Integer.parseInt(request.getParameter("setId"));
