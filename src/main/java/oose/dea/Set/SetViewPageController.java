@@ -30,16 +30,29 @@ public class SetViewPageController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int setId = Integer.parseInt(request.getParameter("setId"));
-        request.getSession().setAttribute("setId", setId);
-
-        String setName = request.getParameter("setName");
-        request.getSession().setAttribute("setName", setName);
-
         String owner = (String) request.getSession().getValue("owner");
+
+        switch(request.getParameter("action")) {
+
+            case "manage":
+                int setId = Integer.parseInt(request.getParameter("setId"));
+                request.getSession().setAttribute("setId", setId);
+
+                String setName = request.getParameter("setName");
+                request.getSession().setAttribute("setName", setName);
+
+                break;
+
+            case "insert":
+                setModel.insertSet(request.getParameter("name"), owner);
+                break;
+
+        }
+
 
         ArrayList<Set> sets = setModel.getAllSets(owner);
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
+
     }
 }

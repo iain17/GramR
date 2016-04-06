@@ -11,23 +11,20 @@ import java.util.ArrayList;
 public class PhotoModel {
 
     @Inject
-    private PhotoDAO photoDAO;
+    private PhotoSQLDAO photoSQLDAO;
 
     public ArrayList<Photo> getPhotos(String searchTerm) {
-        return photoDAO.findByTitle(searchTerm);
+        return photoSQLDAO.findByTitle(searchTerm);
     }
 
     public ArrayList<Photo> getAllPhotos() {
-        return photoDAO.findAll();
+        return photoSQLDAO.findAll();
     }
 
     public Photo getByPhoto(int id) {
-        return photoDAO.findById(id);
+        return photoSQLDAO.findById(id);
     }
 
-    public void readPhotosFromModel() {
-
-    }
 
     public boolean applyFilter(int photoId, String filter, ArrayList<String> filterArguments) {
         Filter filterObject = null;
@@ -43,11 +40,11 @@ public class PhotoModel {
             ((VintageFilter)filterObject).setLowerRightY(Integer.parseInt(filterArguments.get(3)));
         }
 
-        return photoDAO.applyFilter(photoId, filterObject);
+        return photoSQLDAO.applyFilter(photoId, filterObject);
     }
 
     public boolean insertPhoto(String creator, String title, String url, String description) {
-        return photoDAO.insertPhoto(new Photo(
+        return photoSQLDAO.insertPhoto(new Photo(
                 0,
                 creator,
                 title,

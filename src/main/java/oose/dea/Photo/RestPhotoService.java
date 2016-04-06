@@ -9,17 +9,17 @@ import java.util.ArrayList;
 
 @Path("/photos")
 public class RestPhotoService implements PhotoService {
-    private PhotoDAO photoDAO;
+    private PhotoSQLDAO photoSQLDAO;
 
     @Inject
-    public RestPhotoService(PhotoDAO photoDAO) {
-        this.photoDAO = photoDAO;
+    public RestPhotoService(PhotoSQLDAO photoSQLDAO) {
+        this.photoSQLDAO = photoSQLDAO;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Photo> getAllPhotos() {
-        return photoDAO.findAll();
+        return photoSQLDAO.findAll();
     }
 
 //	@GET

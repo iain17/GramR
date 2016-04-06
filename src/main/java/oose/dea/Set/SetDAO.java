@@ -1,6 +1,7 @@
 package oose.dea.Set;
 
 import com.google.inject.Inject;
+import oose.dea.Photo.Photo;
 import oose.dea.datasource.util.DatabaseProperties;
 
 import java.sql.*;
@@ -33,10 +34,29 @@ public class SetDAO {
         return sets.get(0);
     }
 
-    public void save(Set set) {
+    public boolean save(Set set) {
+        return tryInsert(set);
     }
 
     public void delete(int setId) {
+    }
+
+    private boolean tryInsert(Set set) {
+        try {
+            Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO `Set`(owner, `name`) " +
+                    "VALUES(?, ?)");
+            statement.setString(1, set.getOwner());
+            statement.setString(2, set.getName());
+            statement.execute();
+
+            statement.close();
+            connection.close();
+            return true;
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
+        }
+        return false;
     }
 
     private void tryFindAll(List<Set> sets) {

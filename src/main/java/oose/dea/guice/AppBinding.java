@@ -1,9 +1,11 @@
 package oose.dea.guice;
 
 import com.google.inject.servlet.ServletModule;
-import oose.dea.Photo.AddPhotoPageController;
-import oose.dea.Photo.PhotoViewPageController;
-import oose.dea.Photo.SearchPhotoPageController;
+import oose.dea.Filter.FilterDAO;
+import oose.dea.Filter.FilterSQLDAO;
+import oose.dea.Photo.*;
+import oose.dea.Privacy.PrivacyDAO;
+import oose.dea.Privacy.PrivacySQLDAO;
 import oose.dea.Set.SetViewPageController;
 
 public class AppBinding extends ServletModule {
@@ -17,8 +19,8 @@ public class AppBinding extends ServletModule {
 
         serve("/photos").with(PhotoViewPageController.class);
 
-//        serve("/addPhoto").with(AddPhotoPageController.class);
-//        bind(PhotoService.class).to(RestPhotoService.class);
-//        bind(ItemDao.class).to(SQLItemDao.class);
+        bind(PrivacyDAO.class).to(PrivacySQLDAO.class);
+        bind(FilterDAO.class).to(FilterSQLDAO.class);
+        bind(PhotoDAO.class).to(PhotoSQLDAO.class);
     }
 }

@@ -13,6 +13,10 @@ public class SetModel {
         return setDAO.findByOwner(owner);
     }
 
+    public boolean insertSet(String name, String owner) {
+        return setDAO.save(new Set(0, owner, name));
+    }
+
     public ArrayList<Set> readSetsFromModel() {
         return setDAO.findAll();
     }
