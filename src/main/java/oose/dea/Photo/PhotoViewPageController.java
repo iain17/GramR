@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 
 @Singleton
-@WebServlet(urlPatterns = {"/photos", "/photo/*"})
+@WebServlet(urlPatterns = {"/photos", "/photo/{id}"})
 public class PhotoViewPageController extends HttpServlet {
     @Inject
     private PhotoModel photoModel;
@@ -23,21 +23,45 @@ public class PhotoViewPageController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //Error betekent dat deze code dubbel wordt aangevoerd, terwijl dat maar een keer mag.x
-
-        if (request.getRequestURI().equals("/photos")) {
+        /*if (request.getRequestURI().equals("/photos")) {
             ArrayList<Photo> photos = photoModel.getAllPhotos();
             request.setAttribute("photos", photos);
             request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
-        } else {
+        } else {*/
             //We'll just assume that it is /photo/*
 
             request.getRequestDispatcher("Photo/PhotoView/applyFilter.jsp").forward(request, response);
-        }
+        //}
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String filter = request.getParameter("filter");
+
+        System.out.println(request.getParameter("filter"));
+        System.out.println(request.getParameter("grayPercentage"));
+        System.out.println(request.getParameter("vintageUpperLeftX"));
+        System.out.println(request.getParameter("vintageUpperLeftY"));
+        System.out.println(request.getParameter("vintageUpperRightX"));
+        System.out.println(request.getParameter("vintageUpperRightY"));
+
+        int photoId = 18;
+
+        //photoId = request.getParameter("");
+
+        ArrayList<String> filterArguments = new ArrayList<String>();
+
+        if (filter.equals("gray")) {
+            filterArguments.add(request.getParameter("grayPercentage"));
+        } else if (filter.equals("vintage")) {
+            filterArguments.add(request.getParameter("vintageUpperLeftX"));
+            filterArguments.add(request.getParameter("vintageUpperLeftY"));
+            filterArguments.add(request.getParameter("vintageUpperRightX"));
+            filterArguments.add(request.getParameter("vintageUpperRightY"));
+        }
+
+        photoModel.applyFilter(photoId, filter, filterArguments);
+
         request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
     }
 }

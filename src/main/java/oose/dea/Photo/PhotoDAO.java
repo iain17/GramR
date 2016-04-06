@@ -1,6 +1,9 @@
 package oose.dea.Photo;
 
 import com.google.inject.Inject;
+import oose.dea.Filter.Filter;
+import oose.dea.Filter.GrayFilter;
+import oose.dea.Filter.VintageFilter;
 import oose.dea.Privacy.PrivacyModel;
 import oose.dea.datasource.util.DatabaseProperties;
 
@@ -79,7 +82,6 @@ public class PhotoDAO {
             Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Photo WHERE title LIKE ?");
             statement.setString(1, "%" + title + "%");
-
             addNewFromDatabase(photos, statement);
             statement.close();
             connection.close();
@@ -109,8 +111,42 @@ public class PhotoDAO {
                 privacyModel.getAllPrivaciesByPhotoId(resultSet.getInt("id")),
                 null//filter
         );
-        //
 
         photos.add(photo);
+    }
+
+    public boolean applyFilter(int photoId, Filter filterObject) {
+        try {
+            Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
+            PreparedStatement statement = null;
+
+            if (filterObject instanceof GrayFilter) {
+                statement = connection.prepareStatement("UPDATE Photo " +
+                        "SET filter = 'gray', filterGrayPercentage = ? " +
+                        "WHERE id = ?");
+
+                statement.setInt(1, ((GrayFilter) filterObject).getPercentage());
+                statement.setInt(2, photoId);
+            } else if (filterObject instanceof VintageFilter) {
+                statement = connection.prepareStatement("UPDATE Photo " +
+                        "SET filter = 'vintage', filterVintageUpperLeftX = ?, filterVintageUpperLeftY = ?, filterVintageLowerRightX = ?, filterVintageLowerRightY = ? " +
+                        "WHERE id = ?");
+
+                statement.setInt(1, ((VintageFilter) filterObject).getUpperLeftX());
+                statement.setInt(2, ((VintageFilter) filterObject).getUpperLeftY());
+                statement.setInt(3, ((VintageFilter) filterObject).getLowerRightX());
+                statement.setInt(4, ((VintageFilter) filterObject).getLowerRightY());
+                statement.setInt(5, photoId);
+            }
+
+            statement.execute();
+
+            statement.close();
+            connection.close();
+            return true;
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
+        }
+        return false;
     }
 }
