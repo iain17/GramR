@@ -6,8 +6,12 @@ import java.util.ArrayList;
 
 public class PrivacyModel {
 
-    @Inject
     private PrivacyDAO privacyDAO;
+
+    @Inject
+    public PrivacyModel(PrivacyDAO privacyDAO) {
+        this.privacyDAO = privacyDAO;
+    }
 
     public ArrayList<Privacy> getAllPrivaciesByPhotoId(int photoId) {
         return privacyDAO.findByPhotoId(photoId);

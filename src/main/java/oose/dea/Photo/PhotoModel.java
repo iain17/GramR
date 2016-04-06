@@ -10,8 +10,12 @@ import java.util.ArrayList;
 
 public class PhotoModel {
 
-    @Inject
     private PhotoDAO photoDAO;
+
+    @Inject
+    public PhotoModel(PhotoDAO photoDAO) {
+        this.photoDAO = photoDAO;
+    }
 
     public ArrayList<Photo> getPhotos(String searchTerm) {
         return photoDAO.findByTitle(searchTerm);
@@ -24,7 +28,6 @@ public class PhotoModel {
     public Photo getByPhoto(int id) {
         return photoDAO.findById(id);
     }
-
 
     public boolean applyFilter(int photoId, String filter, ArrayList<String> filterArguments) {
         Filter filterObject = null;

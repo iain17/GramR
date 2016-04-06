@@ -6,8 +6,12 @@ import java.util.ArrayList;
 
 public class SetModel {
 
-    @Inject
     private SetDAO setDAO;
+
+    @Inject
+    public SetModel(SetDAO setDAO) {
+        this.setDAO = setDAO;
+    }
 
     public ArrayList<Set> getAllSets(String owner) {
         return setDAO.findByOwner(owner);
