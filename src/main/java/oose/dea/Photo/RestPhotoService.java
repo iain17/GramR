@@ -1,15 +1,13 @@
 package oose.dea.Photo;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
+import java.util.List;
 
 @Path("/photos")
-public class RestPhotoService implements PhotoService {
+public class RestPhotoService {
     private PhotoModel photoModel;
 
     @Inject
@@ -23,16 +21,18 @@ public class RestPhotoService implements PhotoService {
         return photoModel.getAllPhotos();
     }
 
-//    @Path("/{sku}")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public boolean applyFilter(int photoId, String filter, ArrayList<String> filterArguments) {
-//        return photoModel.
-//    }
-
     @GET
     @Path("/photo/{photoId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Photo getPhoto(@PathParam("photoId") final int photoId) {
         return photoModel.getByPhoto(photoId);
     }
+
+    @POST
+    @Path("/photo/{photoId}/applyFilter")
+    @Consumes( MediaType.APPLICATION_FORM_URLENCODED )
+    public boolean applyFilter(@PathParam("photoId") final int photoId, @FormParam("filter") final String filter, @FormParam("filterArguments") List<String> filterArguments) {
+        return photoModel.applyFilter(photoId, filter, (ArrayList<String>)filterArguments);
+    }
+
 }

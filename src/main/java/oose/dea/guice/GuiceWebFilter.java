@@ -24,7 +24,7 @@ public class GuiceWebFilter extends GuiceFilter {
                 String owner = (String) session.getValue("owner");
 
                 //Don't do this session check for rest calls.
-                if (!request.getRequestURI().matches("/rest")) {
+                if (!request.getRequestURI().toString().contains("/rest")) {
 
                     //Do session check:
                     if (!request.getRequestURI().equals("/index.jsp") && !request.getRequestURI().equals("/") && owner == null) {

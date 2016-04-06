@@ -6,6 +6,8 @@ import oose.dea.Filter.FilterSQLDAO;
 import oose.dea.Photo.*;
 import oose.dea.Privacy.PrivacyDAO;
 import oose.dea.Privacy.PrivacySQLDAO;
+import oose.dea.Set.SetDAO;
+import oose.dea.Set.SetSQLDAO;
 import oose.dea.Set.SetViewPageController;
 
 public class AppBinding extends ServletModule {
@@ -20,6 +22,7 @@ public class AppBinding extends ServletModule {
         serve("/photos").with(PhotoViewPageController.class);
 
         bind(PrivacyDAO.class).to(PrivacySQLDAO.class);
+        bind(SetDAO.class).to(SetSQLDAO.class);
         bind(FilterDAO.class).to(FilterSQLDAO.class);
         bind(PhotoDAO.class).to(PhotoSQLDAO.class);
     }

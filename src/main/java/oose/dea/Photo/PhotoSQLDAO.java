@@ -17,7 +17,9 @@ import java.util.logging.Logger;
 public class PhotoSQLDAO implements PhotoDAO {
     @Inject
     public DatabaseProperties databaseProperties;
+
     private Logger logger = Logger.getLogger(getClass().getName());
+
     @Inject
     private PrivacyDAO privacyDAO;
 
