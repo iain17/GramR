@@ -18,7 +18,7 @@ class RestResourceConfig extends ResourceConfig {
     @Inject
     public RestResourceConfig(ServiceLocator serviceLocator) {
         packages(true, "oose.dea.Photo");
-        packages(true, "oose.dea.Set");
+        //packages(true, "oose.dea.Set");
         property(JSON_SERIALIZER, JACKSON_JSON_SERIALIZER);
         GuiceBridge.getGuiceBridge().initializeGuiceBridge(serviceLocator);
         GuiceIntoHK2Bridge guiceBridge = serviceLocator.getService(GuiceIntoHK2Bridge.class);

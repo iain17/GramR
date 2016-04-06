@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c063960-039e-4edd-9de4-a26c86a4e102" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterSQLDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacySQLDAO.java" />
+    <list default="true" id="3c063960-039e-4edd-9de4-a26c86a4e102" name="Default" comment="Made interfaces for our dao's so we can quickly switch.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetDAO.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Set/SetView/show.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Set/SetView/show.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java" afterPath="$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java" />
     </list>
     <ignored path="simple-jersey-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +55,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppBinding.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java">
+      <file leaf-file-name="PhotoSQLDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23153253">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3384785">
+              <caret line="171" column="68" selection-start-line="171" selection-start-column="68" selection-end-line="171" selection-end-column="68" />
+              <folding>
+                <element signature="e#6477#6486#0" expanded="true" />
+                <marker date="1459952213000" expanded="true" signature="1684:1841" placeholder="UPDATE Photo... " />
+                <marker date="1459952213000" expanded="true" signature="2097:2436" placeholder="UPDATE Photo... " />
+                <marker date="1459952213000" expanded="true" signature="3394:3488" placeholder="INSERT INTO Photo... " />
+                <marker date="1459952213000" expanded="true" signature="4282:4301" placeholder="SELECT * fro... Photo" />
+                <marker date="1459952213000" expanded="true" signature="4282:4314" placeholder="SELECT * fro... Photo" />
+                <marker date="1459952213000" expanded="true" signature="4891:4910" placeholder="SELECT * fro... Photo" />
+                <marker date="1459952213000" expanded="true" signature="5463:5501" placeholder="SELECT * FRO... Photo" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrivacyDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrivacySQLDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacySQLDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="62" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="62" />
+              <folding>
+                <marker date="1459946454000" expanded="true" signature="1189:1272" placeholder="INSERT INTO Privacy... " />
+                <marker date="1459946454000" expanded="true" signature="1998:2019" placeholder="SELECT * fro... Privacy" />
+                <marker date="1459946454000" expanded="true" signature="2572:2611" placeholder="SELECT * fro... Privacy" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrivacyModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -91,19 +140,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/GrayFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/VintageFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/IPhotoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestResourceConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceServletConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/Filter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/RestSetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Privacy.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Set/SetView/startAddPhoto.jsp" />
@@ -117,14 +163,12 @@
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/StaticContent/HomeViewPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/Privacy.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/SearchPhotoPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/AddPhotoView/searchPhoto.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/StaticContent/HomeView/home.jsp" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/show.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoViewPageController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Photo/PhotoView/applyFilter.jsp" />
@@ -132,16 +176,21 @@
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Set/SetDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/IPhotoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/IFilterDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/IPrivacyDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterSQLDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java" />
       </list>
     </option>
   </component>
@@ -1414,7 +1463,7 @@
       <workItem from="1459853022318" duration="5042000" />
       <workItem from="1459881222494" duration="8798000" />
       <workItem from="1459927536160" duration="785000" />
-      <workItem from="1459936769185" duration="9217000" />
+      <workItem from="1459936769185" duration="12870000" />
     </task>
     <task id="LOCAL-00001" summary="Got jdbc working">
       <created>1459427184770</created>
@@ -1512,11 +1561,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459941651413</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Made interfaces for our dao's so we can quickly switch.">
+      <created>1459947405035</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1459947405035</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82581000" />
+    <option name="totallyTimeSpent" value="86234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1676" height="1027" extended-state="6" />
@@ -1524,15 +1579,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.49510404" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.49388006" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43529412" sideWeight="0.50244796" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5604278" sideWeight="0.51040393" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986537" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2973262" sideWeight="0.49204406" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62352943" sideWeight="0.48959607" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23806609" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1545,7 +1600,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3957219" sideWeight="0.497552" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3957219" sideWeight="0.49510404" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1584,7 +1639,8 @@
     <MESSAGE value="search now shows sets of each photo a photo is in." />
     <MESSAGE value="Started on apply filter. Robin may do this one for once." />
     <MESSAGE value="filter sequence ding is af." />
-    <option name="LAST_COMMIT_MESSAGE" value="filter sequence ding is af." />
+    <MESSAGE value="Made interfaces for our dao's so we can quickly switch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made interfaces for our dao's so we can quickly switch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1710,23 +1766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.97072417">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding>
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1570#1571#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06615215">
@@ -1745,14 +1784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4817987">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4753521">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1776,24 +1807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024350649">
           <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61452514">
-          <caret line="32" column="9" selection-start-line="19" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <marker date="1459940344000" expanded="true" signature="659:1269" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceServletConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1396648">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1825,49 +1838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24807057">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22160149">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <marker date="1459944918000" expanded="true" signature="1235:1305" placeholder="INSERT INTO Set... " />
-            <marker date="1459944918000" expanded="true" signature="1962:1981" placeholder="SELECT * fro... Set" />
-            <marker date="1459944918000" expanded="true" signature="2519:2554" placeholder="SELECT * fro... Set" />
-            <marker date="1459944918000" expanded="true" signature="3130:3162" placeholder="SELECT * fro... Set" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetViewPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61190736">
           <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08269019">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1920,29 +1894,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/AddPhotoPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08269019">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/RestResourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3488372">
+          <caret line="15" column="100" selection-start-line="15" selection-start-column="100" selection-end-line="15" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33076075">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19933555">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/RestPhotoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3954306">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06615215">
+        <state vertical-scroll-proportion="0.086330935">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceServletConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06615215">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.107913665">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/GuiceWebFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.107913665">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <marker date="1459950167000" expanded="true" signature="661:1297" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24807057">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Set/SetDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="23" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
+          <folding>
+            <marker date="1459944918000" expanded="true" signature="1235:1305" placeholder="INSERT INTO Set... " />
+            <marker date="1459944918000" expanded="true" signature="1962:1981" placeholder="SELECT * fro... Set" />
+            <marker date="1459944918000" expanded="true" signature="2519:2554" placeholder="SELECT * fro... Set" />
+            <marker date="1459944918000" expanded="true" signature="3130:3162" placeholder="SELECT * fro... Set" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1950,51 +1987,49 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16538037">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3660419">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterSQLDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09538951">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <marker date="1459946619000" expanded="true" signature="827:847" placeholder="SELECT * fro... Filter" />
-          </folding>
+        <state vertical-scroll-proportion="0.6615215">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23153253">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06615215">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <marker date="1459946801000" expanded="true" signature="1507:1601" placeholder="INSERT INTO Photo... " />
-            <marker date="1459946801000" expanded="true" signature="2395:2414" placeholder="SELECT * fro... Photo" />
-            <marker date="1459946801000" expanded="true" signature="2395:2427" placeholder="SELECT * fro... Photo" />
-            <marker date="1459946801000" expanded="true" signature="2998:3017" placeholder="SELECT * fro... Photo" />
-            <marker date="1459946801000" expanded="true" signature="3563:3601" placeholder="SELECT * FRO... Photo" />
-            <marker date="1459946801000" expanded="true" signature="5184:5313" placeholder="UPDATE Photo... " />
-            <marker date="1459946801000" expanded="true" signature="5567:5791" placeholder="UPDATE Photo... " />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacySQLDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06615215">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="62" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="62" />
           <folding>
             <marker date="1459946454000" expanded="true" signature="1189:1272" placeholder="INSERT INTO Privacy... " />
             <marker date="1459946454000" expanded="true" signature="1998:2019" placeholder="SELECT * fro... Privacy" />
@@ -2003,27 +2038,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterSQLDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023372287">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <marker date="1459946619000" expanded="true" signature="827:847" placeholder="SELECT * fro... Filter" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Filter/FilterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1323043">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Privacy/PrivacyModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/Photo/PhotoSQLDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.115766264">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/oose/dea/guice/AppBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23153253">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.3384785">
+          <caret line="171" column="68" selection-start-line="171" selection-start-column="68" selection-end-line="171" selection-end-column="68" />
+          <folding>
+            <element signature="e#6477#6486#0" expanded="true" />
+            <marker date="1459952213000" expanded="true" signature="1684:1841" placeholder="UPDATE Photo... " />
+            <marker date="1459952213000" expanded="true" signature="2097:2436" placeholder="UPDATE Photo... " />
+            <marker date="1459952213000" expanded="true" signature="3394:3488" placeholder="INSERT INTO Photo... " />
+            <marker date="1459952213000" expanded="true" signature="4282:4301" placeholder="SELECT * fro... Photo" />
+            <marker date="1459952213000" expanded="true" signature="4282:4314" placeholder="SELECT * fro... Photo" />
+            <marker date="1459952213000" expanded="true" signature="4891:4910" placeholder="SELECT * fro... Photo" />
+            <marker date="1459952213000" expanded="true" signature="5463:5501" placeholder="SELECT * FRO... Photo" />
+          </folding>
         </state>
       </provider>
     </entry>

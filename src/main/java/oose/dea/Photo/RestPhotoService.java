@@ -9,22 +9,23 @@ import java.util.ArrayList;
 
 @Path("/photos")
 public class RestPhotoService implements PhotoService {
-    private PhotoSQLDAO photoSQLDAO;
+    private PhotoModel photoModel;
 
     @Inject
-    public RestPhotoService(PhotoSQLDAO photoSQLDAO) {
-        this.photoSQLDAO = photoSQLDAO;
+    public RestPhotoService(PhotoModel photoModel) {
+        this.photoModel = photoModel;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Photo> getAllPhotos() {
-        return photoSQLDAO.findAll();
+        return photoModel.getAllPhotos();
     }
 
 //	@GET
 //	@Path("/{sku}")
 //	@Produces(MediaType.APPLICATION_JSON)
-//	public void applyFilter(int photoId, int filter, int filterArguments) {
+//	public boolean applyFilter(int photoId, String filter, ArrayList<String> filterArguments) {
+//        return photoModel.applyFilter(photoId, filter, filterArguments);
 //	}
 }

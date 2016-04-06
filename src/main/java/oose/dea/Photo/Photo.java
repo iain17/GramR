@@ -32,6 +32,8 @@ public class Photo {
     }
 
     public void setPrivacies(ArrayList<Privacy> privacies) {
+        if(privacies == null)
+            return;
         this.privacies = privacies;
 
         //Set photo for privacy.
