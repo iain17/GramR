@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public interface SetService {
 
-    PhotoModel photoModel = null;
-
     SetModel setModel = null;
 
-    ArrayList<Set> getAllSets(int owner);
+    public ArrayList<Set> getAllSets(String owner);
 }

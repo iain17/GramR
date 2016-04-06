@@ -9,16 +9,16 @@ import java.util.ArrayList;
 
 @Path("/sets")
 public class RestSetService implements SetService {
-    private SetDAO setDAO;
+    private SetModel setModel;
 
     @Inject
     public RestSetService(SetDAO setDAO) {
-        this.setDAO = setDAO;
+        this.setModel = setModel;
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<Set> getAllSets(int owner) {
-        return setDAO.findAll();
+    public ArrayList<Set> getAllSets(String owner) {
+        return setModel.getAllSets(owner);
     }
 }

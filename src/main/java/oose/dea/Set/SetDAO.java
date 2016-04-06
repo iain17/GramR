@@ -2,9 +2,6 @@ package oose.dea.Set;
 
 import java.util.ArrayList;
 
-/**
- * Created by iain17 on 06/04/16.
- */
 public interface SetDAO {
 
     ArrayList<Set> findByOwner(String owner);
