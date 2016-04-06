@@ -9,12 +9,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.Path;
+import javax.ws.rs.ext.ExceptionMapper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
 @Singleton
-@WebServlet(urlPatterns = {"/photos", "/photo/{id}"})
+//"/photos",
+@WebServlet()
 public class PhotoViewPageController extends HttpServlet {
     @Inject
     private PhotoModel photoModel;
@@ -23,31 +26,34 @@ public class PhotoViewPageController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*if (request.getRequestURI().equals("/photos")) {
+        int photoId = 0;
+        try {
+            photoId = Integer.parseInt(request.getParameter("photoId"));
+        }catch(Exception e) {
+
+        }
+
+        if(photoId != 0) {
+            Photo photo = photoModel.getByPhoto(photoId);
+            request.setAttribute("photo", photo);
+            request.getRequestDispatcher("/Photo/PhotoView/applyFilter.jsp").forward(request, response);
+        } else {
             ArrayList<Photo> photos = photoModel.getAllPhotos();
             request.setAttribute("photos", photos);
-            request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
-        } else {*/
-            //We'll just assume that it is /photo/*
-
-            request.getRequestDispatcher("Photo/PhotoView/applyFilter.jsp").forward(request, response);
-        //}
+            request.getRequestDispatcher("/Photo/PhotoView/show.jsp").forward(request, response);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int photoId = 0;
+        try {
+            photoId = Integer.parseInt(request.getParameter("photoId"));
+        }catch(Exception e) {
+
+        }
+
         String filter = request.getParameter("filter");
-
-        System.out.println(request.getParameter("filter"));
-        System.out.println(request.getParameter("grayPercentage"));
-        System.out.println(request.getParameter("vintageUpperLeftX"));
-        System.out.println(request.getParameter("vintageUpperLeftY"));
-        System.out.println(request.getParameter("vintageUpperRightX"));
-        System.out.println(request.getParameter("vintageUpperRightY"));
-
-        int photoId = 18;
-
-        //photoId = request.getParameter("");
 
         ArrayList<String> filterArguments = new ArrayList<String>();
 
@@ -60,8 +66,9 @@ public class PhotoViewPageController extends HttpServlet {
             filterArguments.add(request.getParameter("vintageUpperRightY"));
         }
 
-        photoModel.applyFilter(photoId, filter, filterArguments);
-
-        request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
+        boolean result = photoModel.applyFilter(photoId, filter, filterArguments);
+        request.setAttribute("result", result);
+        request.setAttribute("applied", true);
+        request.getRequestDispatcher("/Photo/PhotoView/applyFilter.jsp").forward(request, response);
     }
 }

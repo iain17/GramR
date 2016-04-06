@@ -21,6 +21,10 @@ public class PhotoModel {
         return photoDAO.findAll();
     }
 
+    public Photo getByPhoto(int id) {
+        return photoDAO.findById(id);
+    }
+
     public void readPhotosFromModel() {
 
     }

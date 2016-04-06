@@ -16,7 +16,6 @@ public class AppBinding extends ServletModule {
         serve("/searchPhoto").with(SearchPhotoPageController.class);
 
         serve("/photos").with(PhotoViewPageController.class);
-        serve("/photo/*").with(PhotoViewPageController.class);
 
 //        serve("/addPhoto").with(AddPhotoPageController.class);
 //        bind(PhotoService.class).to(RestPhotoService.class);

@@ -34,7 +34,7 @@
                             <c:out value="${photo.description}"/>
                         </td>
                         <td>
-                            <a href="/photo/${photo.id}">Filter toepassen</a>
+                            <a href="/photos?photoId=${photo.id}">Filter toepassen</a>
                         </td>
                     </tr>
                 </c:forEach>

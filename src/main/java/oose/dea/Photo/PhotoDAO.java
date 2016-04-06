@@ -38,7 +38,13 @@ public class PhotoDAO {
         return photos;
     }
 
-    public void findById(int photoId) {
+    public Photo findById(int photoId) {
+        ArrayList<Photo> photos = new ArrayList<>();
+        tryFindById(photos, photoId);
+        if(photos.size() != 1) {
+            return null;
+        }
+        return photos.get(0);
     }
 
     public boolean insertPhoto(Photo photo) {
@@ -63,6 +69,20 @@ public class PhotoDAO {
             logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
         }
         return false;
+    }
+
+    private void tryFindById(List<Photo> photos, int photoId) {
+        try {
+            Connection connection = DriverManager.getConnection(databaseProperties.connectionString());
+            PreparedStatement statement = connection.prepareStatement("SELECT * from Photo WHERE id = ?");
+            statement.setInt(1, photoId);
+
+            addNewFromDatabase(photos, statement);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error communicating with database " + databaseProperties.connectionString(), e);
+        }
     }
 
     private void tryFindAll(List<Photo> photos) {
