@@ -11,6 +11,7 @@ public class DatabaseProperties {
 
     public DatabaseProperties() {
         properties = new Properties();
+
         try {
             properties.load(getClass().getClassLoader().getResourceAsStream("database.properties"));
         } catch (IOException e) {
@@ -31,5 +32,4 @@ public class DatabaseProperties {
     public String connectionString() {
         return properties.getProperty("connectionString");
     }
-
 }

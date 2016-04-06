@@ -4,7 +4,6 @@
 <head>
     <title>GramR - Apply filter on {title}</title>
     <script>
-
         function applyFilter(select) {
             switch (select) {
                 case "gray":
@@ -17,7 +16,6 @@
                     break;
             }
         }
-
     </script>
 </head>
 <body>

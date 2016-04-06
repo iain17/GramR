@@ -31,9 +31,8 @@ public class AddPhotoPageController extends HttpServlet {
                 request.getParameter("url"),
                 request.getParameter("description")
         );
+
         request.setAttribute("result", result);
         request.getRequestDispatcher("Photo/AddPhotoView/show.jsp").forward(request, response);
-
     }
-
 }

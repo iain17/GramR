@@ -1,5 +1,7 @@
 package oose.dea.Photo;
 
+import oose.dea.Set.Set;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.servlet.ServletException;
@@ -21,20 +23,21 @@ public class PhotoViewPageController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //Error betekent dat deze code dubbel wordt aangevoerd, terwijl dat maar een keer mag.x
 
-
-        if(request.getRequestURI().equals("/photos")) {
+        if (request.getRequestURI().equals("/photos")) {
             ArrayList<Photo> photos = photoModel.getAllPhotos();
             request.setAttribute("photos", photos);
             request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
         } else {
-
             //We'll just assume that it is /photo/*
-            //Hij loopt geen idee waarom. Robin fix het.
+
             request.getRequestDispatcher("Photo/PhotoView/applyFilter.jsp").forward(request, response);
-
         }
-
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("Photo/PhotoView/show.jsp").forward(request, response);
+    }
 }

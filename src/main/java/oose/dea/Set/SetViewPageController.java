@@ -14,7 +14,6 @@ import java.util.logging.Logger;
 @Singleton
 @WebServlet(urlPatterns = "/sets")
 public class SetViewPageController extends HttpServlet {
-
     @Inject
     SetModel setModel;
 
@@ -31,7 +30,6 @@ public class SetViewPageController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         int setId = Integer.parseInt(request.getParameter("setId"));
         request.getSession().setAttribute("setId", setId);
 
@@ -43,7 +41,5 @@ public class SetViewPageController extends HttpServlet {
         ArrayList<Set> sets = setModel.getAllSets(owner);
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);
-
     }
-
 }
