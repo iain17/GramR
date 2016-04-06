@@ -119,7 +119,7 @@ public class PhotoSQLDAO implements PhotoDAO {
             PreparedStatement statement = connection.prepareStatement("SELECT * from Photo WHERE id = ?");
             statement.setInt(1, photoId);
 
-            addNewFromDatabase(photos, statement, true);
+            addNewFromDatabase(photos, statement, false);
             statement.close();
             connection.close();
         } catch (SQLException e) {
