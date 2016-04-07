@@ -63,5 +63,6 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.34" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.187" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.10.19" level="project" />
   </component>
 </module>

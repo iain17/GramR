@@ -28,5 +28,4 @@ public class SetModel {
     public Set getSet(int setId) {
         return setDAO.findById(setId);
     }
-
 }

@@ -49,7 +49,6 @@ public class SetViewPageController extends HttpServlet {
 
         }
 
-
         ArrayList<Set> sets = setModel.getAllSets(owner);
         request.setAttribute("sets", sets);
         request.getRequestDispatcher("Set/SetView/show.jsp").forward(request, response);

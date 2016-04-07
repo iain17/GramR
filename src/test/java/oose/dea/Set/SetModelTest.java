@@ -1,12 +1,9 @@
 package oose.dea.Set;
 
-import oose.dea.Filter.GrayFilter;
 import oose.dea.datasource.util.DatabaseProperties;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
-
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertNull;

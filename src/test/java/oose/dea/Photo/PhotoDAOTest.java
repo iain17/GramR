@@ -1,9 +1,6 @@
 package oose.dea.Photo;
 
 import oose.dea.Filter.GrayFilter;
-import oose.dea.Photo.Photo;
-import oose.dea.Photo.PhotoModel;
-import oose.dea.Photo.PhotoSQLDAO;
 import oose.dea.datasource.util.DatabaseProperties;
 import org.junit.Before;
 import org.junit.Test;

@@ -40,8 +40,7 @@ public class SetSQLDAO implements SetDAO {
         return tryInsert(set);
     }
 
-    public void delete(int setId) {
-    }
+    public void delete(int setId) {}
 
     private boolean tryInsert(Set set) {
         try {
