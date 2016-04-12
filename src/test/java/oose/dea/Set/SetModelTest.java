@@ -20,19 +20,19 @@ public class SetModelTest {
 
     @Test
     public void testSuccessInsert() throws Exception {
-        assertEquals(true, setModel.insertSet("Test", "owner3000"));
+        assertEquals(true, setModel.insertSet("Test1", "Wim"));
     }
 
     @Test
     public void TestGetSets() throws Exception {
-        ArrayList<Set> sets = setModel.getAllSets("owner3000");
+        ArrayList<Set> sets = setModel.getAllSets("Wim");
         assertNotNull(sets);
     }
 
     @Test
     public void TestGetSet() throws Exception {
-        //So there is at least id 1. Because the database starts there.
-        assertEquals(true, setModel.insertSet("Test", "owner3000"));
+        //The database auto increments. So there is at least id 1 after this insert.
+        assertEquals(true, setModel.insertSet("Test2", "Wim"));
 
         Set set = setModel.getSet(1);
         assertNotNull(set);
